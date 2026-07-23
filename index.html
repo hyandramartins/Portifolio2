@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <nav class="container navegacao">
+            <div class="logo">
+                <img class="imagemLogo " src="./img/hyandra2.png.jpeg" alt="hyandra">
+            </div>
+            <img class="botaoMenu" src="./img/menu.png" alt="menu">
+            <!--<button class="botaoMenu">≡</button>--->
+            <!--<div class="IconeMenu"><img src="./img/menu.png" alt="menu"></div>--->
+            <ul class="menu">
+                <li>
+                    <a href="#inicio">Início</a>
+                </li>
+                <li>
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li>
+                    <a href="#projetos">Projetos</a>
+                </li>
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="inicio" id="inicio">
+        <div class="container">
+            <div class="texto">
+                <h1>Olá, eu sou a Hyandra</h1>
+                <h3>Desenvolvedora em formação</h3>
+                <h2>Portfólio com projetos acadêmicos e pessoais</h2>
+                <a href="#projetos" class="botaoProjeto">Ver projetos</a>
+            </div>
+            <div>
+                <img img class="imagemPixel" src="./img/semFundoPixelHy.png" alt="imagemPixel">
+            </div>
+        </div>
+    </section>
+
+    <section class="projetos" id="projetos">
+        <div class="container">
+            <div class="card" onclick="openModal(this)" data-titulo="Happy Maze"
+                data-texto="Jogo desenvolvido com o objetivo de praticar lógica de jogo, sistema de colisões, gerenciamento de fases, uso de áudio e movimentação top-down. O jogador deve alcançar o troféu em cada fase, evitando as paredes que funcionam como obstáculos. Ao colidir, o personagem retorna ao início do labirinto. O jogo conta com elementos de suspense, incluindo jumpscares e efeitos sonoros distintos para cada fase, variando de acordo com o nível. O projeto foi desenvolvido utilizando a engine Unity, com a linguagem C#. Todos os assets gráficos utilizados foram obtidos na internet."
+                data-link="https://happymaze.netlify.app/">
+                <div class="imagemProjeto">
+                    <img class="imagemCard" src="./img/jogoo.png" alt="happyMaze">
+                </div>
+                <h3>Happy Maze</h3>
+                <p>Jogo de labirinto 2D.</p>
+            </div>
+            <div class="card">
+                <div class="imagemProjeto" onclick="openModal(this)" data-titulo="Sokoban"
+                    data-texto="Projeto em grupo desenvolvido na disciplina de Sistemas Multimídia, em que foi criado um jogo do gênero Sokoban com elementos educacionais. O jogo foi desenvolvido utilizando o Phaser, com as linguagens TypeScript e JavaScript. Todos os assets gráficos utilizados foram obtidos na internet."
+                    data-link="https://stackblitz.com/github/hyandramartins/Sokoban-phaser?file=src%2Fscenes%2FGame.ts&startScript=dev">
+                    <img class="imagemCard" src="./img/sokoban.png" alt="sokoban">
+                </div>
+                <h3>Sokoban</h3>
+                <p>Jogo 2D Sokoban com elementos educacionais.</p>
+            </div>
+            <div class="card">
+                <div class="imagemProjeto" onclick="openModal(this)" data-titulo="ChatBot"
+                    data-texto="Trabalho para a disciplina de Inteligência Computacional. Desenvolvimento de um chatbot com o objetivo de agendar consultas médicas para uma clínica fictícia. O sistema utiliza integração com o Google Calendar para verificar a disponibilidade de horários e efetuar o agendamento automático das consultas. O chatbot também conta com suporte para entrada por áudio, permitindo que o usuário interaja por voz. Para a implementação, foram utilizadas as seguintes tecnologias: n8n para automação dos fluxos, API da OpenIA, Supabase como banco de dados, Redis para o gerenciamento da memória do chatbot e Telegram como interface de comunicação com o usuário.">
+                    <img class="imagemCard" src="./img/IA.png" alt="chatBot">
+                </div>
+                <h3>ChatBot</h3>
+                <p>Chatbot para agendamento de consultas médicas no Telegram.</p>
+            </div>
+            <div class="card">
+                <div class="imagemProjeto" onclick="openModal(this)" data-titulo="Compilador"
+                    data-texto="Esse projeto consiste em produzir um compilador capaz de traduzir uma linguagem de alto-nível para o assembly SaM. O compilador foi desenvolvido utilizado a linguagem Python e recebe como entrada o código-fonte com sintaxe da linguagem C gerando como saída o código equivalente em assembly SaM.">
+                    <img class="imagemCard" src="./img/compilador.png" alt="compiladores">
+                </div>
+                <h3>Compilador</h3>
+                <p>Compilador da linguagem C para a Máquina Virtual SaM.</p>
+            </div>
+            <div class="card">
+                <div class="imagemProjeto" onclick="openModal(this)" data-titulo="Cadastro de Usuários"
+                    data-texto="API de cadastro de usuários, desenvolvida para praticar integração entre frontend e backend, utilizando JavaScript, MongoDB, Prisma, React e Axios."
+                    data-link="https://cadastrar-usuarios.netlify.app/">
+                    <img class="imagemCard" src="./img/cadastro.png" alt="cadastro">
+                </div>
+                <h3>Cadastro de Usuários</h3>
+                <p>API de cadastro de usuários.</p>
+            </div>
+            <div class="card">
+                <div class="imagemProjeto" onclick="openModal(this)" data-titulo="Cronograma Inteligente"
+                    data-texto="Aplicativo mobile que utiliza Inteligência Artificial para gerar cronogramas diários personalizados com base nas tarefas informadas pelo usuário. O sistema considera o horário atual, insere pausas automáticas entre atividades e organiza a rotina. Desenvolvido com React Native e Expo, utilizando a API de IA da Groq."
+                    data-link="https://cronograma-inteligente.netlify.app/">
+                    <img class="imagemCard" src="./img/Cronograma.png" alt="cronograma">
+                </div>
+                <h3>Cronograma Inteligente</h3>
+                <p>App mobile com IA que cria cronogramas diários personalizados a partir das tarefas do usuário.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="sobre" id="sobre">
+        <div class="container">
+            <div class="imagemSobre">
+                <img class=imagemSobree src="./img/hyandra2.png.jpeg" alt="hyandra">
+            </div>
+            <div class="sobreCaixa">
+                <p>
+                    Sou estudante de Ciência da Computação no IFB, atualmente estou no oitavo semestre. Sempre gostei de
+                    tecnologia e jogos, o que me motivou a seguir essa área e explorar a programação.
+
+                    Durante a graduação, desenvolvi conhecimentos em lógica de programação e em linguagens como C, C#,
+                    Java, JavaScript e Python. Também tive meu primeiro contato com desenvolvimento de jogos na
+                    disciplina de Computação Gráfica, onde utilizei a Unity para criar um jogo 2D.
+
+                    Atualmente, estou explorando diferentes áreas da computação e buscando aprender novas tecnologias,
+                    com interesse especial em me aprofundar no desenvolvimento de jogos.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="contato" id="contato">
+        <div class="container">
+            <div class="email">
+                <a href="mailto:hyandramartins323@gmail.com" target="_blank">
+                    <img src="./img/email.png" alt="email">
+                </a>
+            </div>
+            <div class="gitHub">
+                <a href="https://github.com/hyandramartins" target="_blank">
+                    <img src="./img/github.png" alt="gitHub">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="modal" id="modal">
+        <div class="container">
+            <h2 class="modalTitulo" id="modalTitulo"></h2>
+            <hr />
+            <p class="modalTexto" id="modalTexto"></p>
+            <div class="modalAcoes">
+                <a class="modalBotao" id="modalBotao" target="_blank">Abrir projeto</a>
+                <span class="modalPrivado" id="modalPrivado">Projeto privado</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="overlay" id="overlay"></div>
+
+    <script>
+        const modal = document.getElementById('modal');
+        const overlay = document.getElementById('overlay');
+        const modalTitulo = document.getElementById('modalTitulo');
+        const modalTexto = document.getElementById('modalTexto');
+        const modalBotao = document.getElementById('modalBotao');
+        const modalPrivado = document.getElementById('modalPrivado');
+        let botao = document.querySelector('.botaoMenu')
+        let menu = document.querySelector('.menu')
+
+        function openModal(card) {
+            modalTitulo.textContent = card.dataset.titulo;
+            modalTexto.textContent = card.dataset.texto;
+
+            if (card.dataset.link) {
+                modalBotao.href = card.dataset.link;
+                modalBotao.style.display = 'inline-block';
+                modalPrivado.style.display = 'none';
+            } else {
+                modalBotao.style.display = 'none';
+                modalPrivado.style.display = 'block';
+            }
+
+            overlay.style.display = 'block';
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+            overlay.style.display = 'none';
+        }
+
+        overlay.addEventListener('click', closeModal);
+
+        botao.addEventListener('click', () => {
+            menu.classList.toggle('ativo')
+        })
+
+    </script>
+
+</body>
+
+</html>
