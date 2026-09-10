@@ -224,6 +224,90 @@ section {
     text-align: left;
 }
 
+.hrgeracao {
+    width: 100%;
+    margin-top: 10px auto;
+}
+
+.geracaoProcedural {
+    background-color: var(--escuro)
+}
+
+.geracaoProcedural .container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.geracaoProceduralTitulo {
+    color: var(--ciano)
+}
+
+.img-texto {
+    color: var(--branco);
+    margin-bottom: 20px;
+    font-size: small;
+}
+
+
+.ac {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.imagemAC {
+    width: 100%;
+    max-width: 300px;
+}
+
+.imagemAC2 {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.textoGeracaoProcedural {
+    width: 100%;
+    overflow-wrap: break-word;
+    color: var(--branco);
+    border-radius: 1rem;
+}
+
+.drunkard {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.imagemDrunk {
+    width: 100%;
+    max-width: 300px;
+}
+
+.comodosAleatorios {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.imagemComodosAleatorios {
+    width: 100%;
+    max-width: 300px;
+}
+
+.geracaoProcedural a {
+    color: var(--ciano);
+}
+
+.tcc p {
+    width: 100%;
+    overflow-wrap: break-word;
+    color: var(--ciano);
+    border-radius: 1rem;
+}
+
 .contato {
     background-color: var(--branco);
 }
@@ -288,7 +372,7 @@ section {
     background-color: var(--vermelhoEscuro);
 }
 
-hr {
+.hrModal {
     width: 80%;
     height: 3px;
     background-color: var(--vermelho);
@@ -308,7 +392,7 @@ hr {
 }
 
 .modalBotaoX {
-    background-color: var(--vermelho)!important;
+    background-color: var(--vermelho) !important;
     position: absolute;
     right: 0;
     margin-right: 1rem;
@@ -335,6 +419,26 @@ hr {
     backdrop-filter: blur(3px);
     z-index: 3;
     display: none;
+}
+
+@media (max-width: 1000px) {
+
+    .geracaoProcedural .container {
+        width: 90%;
+    }
+
+    .ac,
+    .drunkard,
+    .comodosAleatorios {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagemAC2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -401,4 +505,5 @@ hr {
     .botaoProjeto {
         padding: 15px;
     }
+
 }
