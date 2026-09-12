@@ -22,16 +22,16 @@
                     <a href="#inicio">Início</a>
                 </li>
                 <li>
-                    <a href="#sobre">Sobre</a>
-                </li>
-                <li>
                     <a href="#projetos">Projetos</a>
                 </li>
                 <li>
-                    <a href="#contato">Contato</a>
+                    <a href="#geracaoProcedural">Geração Procedural</a>
                 </li>
                 <li>
-                    <a href="#geracaoProcedural">Geração Procedural</a>
+                    <a href="#sobre">Sobre</a>
+                </li>
+                <li>
+                    <a href="#contato">Contato</a>
                 </li>
             </ul>
         </nav>
@@ -119,59 +119,61 @@
 
     <section class="geracaoProcedural" id="geracaoProcedural">
         <div class="container">
+            <p><strong>Pesquisa e implementação de técnicas de geração procedural para mapas de jogos 2D utilizando Unity e
+                C# </strong>.
+            </p>
             <h2 class="geracaoProceduralTitulo">Autômato Celular</h2>
             <hr class="hrgeracao" />
             <div class="ac">
-                <div class="imagemAC">
-                    <img class=imagemAC src="./img/mapCaves.png" alt="caves">
-                    <p class="img-texto">Rule: Caves; N: 13; r: 2; Steps: 3; Grid: 100 x 100</p>
+                <div class="imagemGeracaoProcedural">
+                    <img src="./img/mapCaves.png" alt="caves">
+                    <p class="img-texto">Rule: Caves | N: 13 | r: 2 | Steps: 3 </p>
                 </div>
                 <div class="textoGeracaoProcedural">
-                    <p>
-                        É possível desenvolver mapas para jogos 2D utilizando autômatos celulares. Um autômato celular
-                        possui uma grade, um conjunto de estados e um conjunto de regras de transição. Para cada célula
-                        da grade, um estado é definido. A partir disso, a cada passo, o sistema evolui de acordo com as
-                        regras estabelecidas, e cada célula determina seu novo estado com base em seu próprio estado e
-                        nos estados das células vizinhas no passo anterior.
-                    </p>
+                    <p> Autômatos celulares podem ser utilizados para gerar mapas de jogos 2D a partir de uma grade de
+                        células, um conjunto de estados e regras de transição. A cada passo, o estado de cada célula é
+                        atualizado de acordo com o estado de seus vizinhos. </p>
+
                     <br>
-                    <p>
-                        Existem diferentes regras de transição que podem ser utilizadas de acordo com o objetivo da
-                        geração. No contexto de mapas 2D, regras como Caves e Majority podem gerar mapas com
-                        características semelhantes a cavernas. Portanto, quando o objetivo é desenvolver um jogo que
-                        possua esse tipo de ambiente, essas regras podem ser uma boa escolha.
-                    </p>
+
+                    <p> Para a geração de cavernas, foram exploradas regras como Caves, Majority e uma combinação de
+                        Diamoeba com Caves. Foram testadas diferentes configurações, variando parâmetros como o raio da
+                        vizinhança, o limiar e a quantidade de iterações. </p>
+
                     <br>
-                    <p> A regra Caves é definida da seguinte forma: as células sobrevivem quando <em>n</em> &ge;
-                        <em>N</em> - 1 e nascem
-                        quando <em>n</em> &ge; <em>N</em>. A regra Majority, por sua vez, é definida da seguinte forma:
-                        as células
-                        sobrevivem quando <em>n</em> &ge; <em>N</em> e nascem quando <em>n</em> &ge; <em>N</em>.
+
+                    <p> Nesse contexto, <em>N</em> representa o limiar utilizado pela regra e <em>r</em> representa o
+                        raio da vizinhança. Os mapas foram inicializados com sementes aleatórias, com 50% das células
+                        preenchidas, utilizando a vizinhança de Moore, que considera células adjacentes e diagonais.
+                        Todos os mapas possuem dimensões de 100 x 100 células.
                     </p>
 
                 </div>
             </div>
 
             <div class="ac">
-                <div class="imagemAC2">
-                    <div>
-                        <img class=imagemAC src="./img/mapMajority.png" alt="majority">
-                        <p class="img-texto">Rule: Majority; N: 13; r: 2; Steps: 3; Grid: 100 x 100</p>
+                <div class="imagemGeracaoProcedural2">
+                    <div class="imagemGeracaoProcedural">
+                        <img src="./img/mapMajority.png" alt="majority">
+                        <p class="img-texto">Rule: Majority | N: 13 | r: 2 | Steps: 3</p>
                     </div>
-                    <div>
-                        <img class=imagemAC src="./img/mapMajority2.png" alt="majority2">
-                        <p class="img-texto">Rule: Majority; N: 13; r: 2; Steps: 5; Grid: 100 x 100</p>
+                    <div class="imagemGeracaoProcedural">
+                        <img src="./img/mapMajority2.png" alt="majority2">
+                        <p class="img-texto">Rule: Majority | N: 13 | r: 2 | Steps: 5</p>
                     </div>
                 </div>
-                <div class="textoGeracaoProcedural">
-                    <p> Nesse contexto, <em>n</em> corresponde ao valor da vizinhança e <em>N</em> corresponde ao
-                        limiar. Foi utilizada a vizinhança de Moore, que considera também as células diagonais em
-                        relação à célula central. Considerando <em>r</em> como o raio da vizinhança, ele define o
-                        alcance das células vizinhas que serão consideradas na contagem. Os mapas foram inicializados
-                        com sementes aleatórias, com 50% do mapa preenchido por células
-                        pretas.
-                    </p>
+
+                <div class="imagemGeracaoProcedural2">
+                    <div class="imagemGeracaoProcedural">
+                        <img src="./img/mapDiamoeba.png" alt="diamoeba">
+                        <p class="img-texto">Rule: Diamoeba | N: 5 | r: 1 | Steps: 3</p>
+                    </div>
+                    <div class="imagemGeracaoProcedural">
+                        <img src="./img/mapDiamoebaCaves.png" alt="diamoebaCaves">
+                        <p class="img-texto">Rule: Diamoeba | N: 5 | r: 1 | Steps: 3 |Rule: Caves | N: 13 | r: 2 | Steps: 1</p>
+                    </div>
                 </div>
+
             </div>
             <a href="https://github.com/hyandramartins/CellularAutomata" target="_blank">
                 <strong>Ver no GitHub</strong>
@@ -180,44 +182,53 @@
 
             <h2 class="geracaoProceduralTitulo">Drunkard's Walk</h2>
             <div class="drunkard">
-                <div class="imagemDrunk">
-                    <img class=imagemAC src="./img/mapDrunk.png" alt="drunk">
-                    <p class="img-texto">Drunks: 400; Steps: 100; Grid: 100 x 100; RandomPositionDiscovery;</p>
+                <div class="imagemGeracaoProcedural">
+                    <img src="./img/mapDrunk.png" alt="drunk">
+                    <p class="img-texto">Drunks: 400 | Steps: 100 | Discovery</p>
                 </div>
                 <div class="textoGeracaoProcedural">
                     <p>
-                        Drunkard's Walk é um algoritmo de caminhada aleatória, no qual um agente, denominado bêbado
-                        (<em>drunk</em>), realiza movimentos aleatórios. No contexto de mapas 2D, inicialmente são
-                        definidas as dimensões da área do mapa. Essa área é preenchida com blocos (paredes). Em seguida,
-                        um <em>drunk</em> é posicionado no mapa, e as células pelas quais ele se desloca são convertidas
-                        em células caminháveis, removendo os blocos que as ocupavam.
+                        Drunkard's Walk é um algoritmo de caminhada aleatória no qual um agente, denominado
+                        <em>drunk</em>, faz movimentos aleatórios pelo mapa.
                     </p>
                     <br>
                     <p>
-                        O <em>drunk</em> pode se mover aleatoriamente pelo mapa em quatro direções cardeais até atingir
-                        um limite máximo de passos. Após gerar um caminho, é possível gerar outro adicionando um novo
-                        <em>drunk</em> ao mapa. Um único caminho traçado é contínuo, já que o <em>drunk</em> não realiza
-                        saltos entre as células.
+                        Para a geração de mapas 2D, a área é inicialmente preenchida com blocos (paredes). Em seguida, o
+                        drunk é posicionado no mapa e as células percorridas são convertidas em áreas caminháveis. O
+                        agente pode se mover aleatoriamente pelas quatro direções cardeais até atingir um limite máximo
+                        de passos.
+                    </p>
+                    <br>
+                    <p>
+                        É possível utilizar múltiplos <em>drunks</em> para gerar diferentes caminhos ou regiões. Os
+                        agentes podem ser posicionados aleatoriamente (<em>Random</em>) ou a partir de áreas já
+                        percorridas (<em>Discovery</em>), permitindo gerar regiões separadas ou uma única região maior e
+                        conectada. Os mapas foram gerados em uma grade de 100 x 100 células.
                     </p>
                 </div>
             </div>
 
             <div class="drunkard">
-                <div>
-                    <img class=imagemAC src="./img/mapDrunkRand2.png" alt="drunkRand2">
-                    <p class="img-texto">Drunks: 400; Steps: 100; Grid: 100 x 100; RandomPosition;</p>
+                <div class="imagemGeracaoProcedural2">
+                    <div class="imagemGeracaoProcedural">
+                        <img src="./img/mapDrunkRand2.png" alt="drunkRand2">
+                        <p class="img-texto">Drunks: 400 | Steps: 100 | Random</p>
+                    </div>
+                    <div class="imagemGeracaoProcedural">
+                        <img src="./img/mapDrunkRand.png" alt="drunkRand">
+                        <p class="img-texto">Drunks: 200 | Steps: 100 | Random</p>
+                    </div>
                 </div>
-                <div>
-                    <img class=imagemAC src="./img/mapDrunkRand.png" alt="drunkRand">
-                    <p class="img-texto">Drunks: 200; Steps: 100; Grid: 100 x 100; RandomPosition;</p>
-                </div>
-                <div class="textoGeracaoProcedural">
-                    <p>
-                        Para possibilitar a formação de regiões separadas no mapa, cada agente pode ser adicionado em
-                        uma posição aleatória. Outra abordagem consiste em adicionar cada agente em uma posição
-                        aleatória dentro de áreas que já foram percorridas, resultando em uma única região maior e
-                        conexa.
-                    </p>
+
+                <div class="imagemGeracaoProcedural2">
+                    <div class="imagemGeracaoProcedural">
+                        <img src="./img/mapDrunkRand3.png" alt="drunkRand3">
+                        <p class="img-texto">Drunks: 100 | Steps: 100 | Random</p>
+                    </div>
+                    <div class="imagemGeracaoProcedural">
+                        <img src="./img/mapDrunkRand4.png" alt="drunkRand4">
+                        <p class="img-texto">Drunks: 50 | Steps: 100 | Random</p>
+                    </div>
                 </div>
             </div>
             <a href="https://github.com/hyandramartins/Drunkard-s-Walk" target="_blank">
@@ -227,69 +238,70 @@
 
             <h2 class="geracaoProceduralTitulo">Posicionamento Simples de Cômodos</h2>
             <div class="comodosAleatorios">
-                <div>
-                    <img class=imagemAC src="./img/mapRandRoom.png" alt="randRoom">
-                    <p class="img-texto">Rooms: 9; Margin: 5; Size: 5-10; Attempts: 100;</p>
+                <div class="imagemGeracaoProcedural">
+                    <img src="./img/mapRandRoom.png" alt="randRoom">
+                    <p class="img-texto">Rooms: 9 | Margin: 5 | Size: 5-10 | Attempts: 100 </p>
                 </div>
 
                 <div class="textoGeracaoProcedural">
-                    <p>
-                        No posicionamento simples de cômodos, salas aleatórias são posicionadas dentro de uma grade 2D.
-                        Inicialmente, definem-se os limites da área do mapa, que é preenchida com blocos representando
-                        as paredes. Em seguida, uma sala retangular de tamanho aleatório é adicionada em uma posição
-                        aleatória do mapa. Caso essa sala sobreponha alguma sala existente, ela é descartada e uma nova
-                        é gerada.
-                        Dessa forma, uma sala só é adicionada ao mapa quando não há sobreposição com outra.
+                    <p> No posicionamento simples de cômodos, salas retangulares de tamanhos aleatórios são distribuídas
+                        em uma grade 2D inicialmente preenchida com paredes. Cada nova sala é adicionada em uma posição
+                        aleatória e, caso haja sobreposição com uma já existente, a tentativa é descartada. O mapa
+                        possui dimensões de 50 x 50 células.
                     </p>
                     <br>
-                    <p>
-                        O processo de alocação das salas continua até que algum critério de parada seja
-                        atingido, como, por exemplo, a quantidade máxima de salas.
+                    <p> A geração continua até atingir um critério de parada, como a quantidade máxima de salas ou o
+                        número de tentativas.
                     </p>
                     <br>
-                    <p>
-                        Considere <em>Rooms</em> como a quantidade máxima de salas, <em>Margin</em> como a região livre
-                        ao redor de cada sala, <em>Size: 5-10</em> como o intervalo de tamanho aleatório das salas e
-                        <em>Attempts</em> como a quantidade de tentativas de alocação das salas.
+                    <p> Para controlar melhor a distribuição das salas, o mapa também pode ser dividido em regiões.
+                        Nesse caso, cada sala e posicionada dentro de uma região, reduzindo
+                        a concentração ou dispersão excessiva pelo mapa.
+                    </p>
+                    <br>
+                    <p> Nesse contexto, <em>Rooms</em> representa a quantidade máxima de salas, <em>Margin</em> a região
+                        livre ao redor de cada sala, <em>Size</em> o intervalo de tamanho das salas e <em>Attempts</em>
+                        a quantidade de tentativas de alocação. Na abordagem por regiões, <em>Region Size</em> define o
+                        tamanho de cada região e <em>Regions</em> define a quantidade de regiões no mapa.
                     </p>
                 </div>
 
             </div>
 
             <div class="comodosAleatorios">
-                <div>
-                    <img class=imagemAC src="./img/mapRandRoomGrid.png" alt="randRoomGrid">
-                    <p class="img-texto">Region Size: 10; Regions: 3 x 3; Room Size: 4-6;</p>
+                <div class="imagemGeracaoProcedural2">
+                    <div class="imagemGeracaoProcedural">
+                        <img src="./img/mapRandomGrid0.png" alt="randomGrid0">
+                        <p class="img-texto">Region Size: 10 | Regions: 3 x 3 | Room Size: 6-8</p>
+                    </div>
+                    <div class="imagemGeracaoProcedural">
+                        <img src="./img/mapRandRoomGrid.png" alt="randRoomGrid">
+                        <p class="img-texto">Region Size: 10 | Regions: 3 x 3 | Room Size: 4-6</p>
+                    </div>
                 </div>
-
-                <div class="textoGeracaoProcedural">
-                    <p>
-                        Para controlar melhor a disposição das salas, é possível organizá-las em uma grade de células.
-                        Em vez de posicioná-las aleatoriamente por todo o mapa, elas são posicionadas aleatoriamente
-                        dentro de uma célula maior da grade. O mapa é dividido em regiões de tamanho definido por
-                        <em>Region Size</em>, e a quantidade de regiões é definida por <em>Regions</em>. Já <em>Room
-                            Size</em> representa o intervalo de tamanho aleatório das salas.
-                    </p>
-                    <br>
-                    <p>
-                        Por exemplo, considerando <em>Region Size: 10</em> e <em>Regions: 3 x 3</em>, o mapa será
-                        dividido em 3 regiões na horizontal e 3 na vertical, totalizando 9 regiões. Como cada região
-                        possui 10 x 10 células, a grade resultante terá 30 x 30 células.
-                    </p>
+                <div class="imagemGeracaoProcedural2">
+                    <div class="imagemGeracaoProcedural">
+                        <img src="./img/mapRandomGrid2.png" alt="randomGrid2">
+                        <p class="img-texto">Region Size: 10 | Regions: 4 x 4 | Room Size: 4-6</p>
+                    </div>
+                    <div class="imagemGeracaoProcedural">
+                        <img src="./img/mapRandomGrid3.png" alt="randomGrid3">
+                        <p class="img-texto">Region Size: 15 | Regions: 4 x 4 | Room Size: 4-6</p>
+                    </div>
                 </div>
             </div>
             <a href="https://github.com/hyandramartins/SimpleRoomPlacement" target="_blank">
-                <strong>Ver no GitHub</strong>
+                <strong>Ver no GitHub Posicionamento Simples de Cômodos</strong>
             </a>
             <a href="https://github.com/hyandramartins/SimpleRoomPlacementGrid" target="_blank">
-                <strong>Ver no GitHub</strong>
+                <strong>Ver no GitHub Posicionamento Simples de Cômodos por Região</strong>
             </a>
             <hr class="hrgeracao" />
             <div class="tcc">
-                <p>Atualmente estou desenvolvendo o meu Trabalho de Conclusão de Curso (TCC), no qual explorei algumas
-                    técnicas clássicas de geração procedural. A partir desse estudo, o tema do meu TCC é a geração
-                    procedural em um jogo 2D utilizando autômatos celulares para a geração dos mapas.
-                </p>
+                <p><strong>Trabalho de Conclusão de Curso (TCC) em Desenvolvimento:</strong></p>
+
+                <p> Geração procedural de mapas 2D utilizando diferentes configurações de autômatos celulares para um
+                    jogo.</p>
             </div>
 
         </div>

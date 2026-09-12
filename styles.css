@@ -257,12 +257,12 @@ section {
     justify-content: center;
 }
 
-.imagemAC {
+.imagemGeracaoProcedural {
     width: 100%;
     max-width: 300px;
 }
 
-.imagemAC2 {
+.imagemGeracaoProcedural2 {
     display: flex;
     flex-direction: row;
     gap: 20px;
@@ -281,33 +281,27 @@ section {
     justify-content: center;
 }
 
-.imagemDrunk {
-    width: 100%;
-    max-width: 300px;
-}
-
 .comodosAleatorios {
     display: flex;
     gap: 30px;
     justify-content: center;
 }
 
-.imagemComodosAleatorios {
-    width: 100%;
-    max-width: 300px;
-}
-
 .geracaoProcedural a {
     color: var(--ciano);
+}
+
+.geracaoProcedural p {
+    width: 100%;
+    overflow-wrap: break-word;
+    color: var(--branco);
 }
 
 .tcc p {
     width: 100%;
     overflow-wrap: break-word;
-    color: var(--ciano);
-    border-radius: 1rem;
+    color: var(--branco);
 }
-
 .contato {
     background-color: var(--branco);
 }
