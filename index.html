@@ -12,7 +12,7 @@
     <header class="cabecalho">
         <nav class="container navegacao">
             <div class="logo">
-                <img class="imagemLogo " src="./img/hyandra2.png.jpeg" alt="hyandra">
+                <img class="imagemLogo " src="./img/eu.png" alt="hyandra">
             </div>
             <img class="botaoMenu" src="./img/menu.png" alt="menu">
             <!--<button class="botaoMenu">≡</button>--->
@@ -41,7 +41,7 @@
         <div class="container">
             <div class="texto">
                 <h1>Olá, eu sou a Hyandra</h1>
-                <h3>Desenvolvedora em formação</h3>
+
                 <h2>Portfólio com projetos acadêmicos e pessoais</h2>
                 <a href="#projetos" class="botaoProjeto">Ver projetos</a>
             </div>
@@ -114,13 +114,28 @@
                 <h3>Pong</h3>
                 <p>Jogo 2D Pong.</p>
             </div>
+            <div class="card">
+                <div class="imagemProjeto" onclick="openModal(this)" data-titulo="Eldoria"
+                    data-texto="Jogo 2D do gênero RPG de ação e combate, desenvolvido na disciplina de Agentes de IA, no qual o papel do agente de IA é gerar missões dinâmicas considerando o universo do jogo e o progresso do jogador.
+
+                    Para gerar a missão, o jogador deve conversar com o NPC Leon, responsável por entregar as missões geradas, e aceitar a missão. Após aceitar a missão, o jogador deve acessar o menu e, então, navegar até a aba de missões para encontrar todas as informações da missão. Ao completar a missão, o jogador deve retornar ao NPC Leon e conversar com ele para receber a recompensa informada pela missão.
+
+                    Para construir esse projeto, foram utilizadas a engine Unity e a ferramenta n8n para a integração do agente de IA. Sempre que o jogador aceita uma missão, uma requisição HTTP utilizando o método POST, contendo um JSON com os dados de progresso do jogador, é enviada para o n8n. O agente de IA, então, considera esses dados, conforme orientado no prompt de comportamento, e consulta a base de conhecimento RAG, que contém informações sobre o universo do jogo, como história, personagens, inimigos, itens e regiões. Assim, ele estrutura um JSON contendo os dados da missão e o envia de volta para a Unity. Na Unity, esse JSON é transformado em objeto e utilizado para criar a missão."
+                    data-link="https://stellar-squirrel-8734f5.netlify.app">
+                    <img class="imagemCard" src="./img/eldoria.png" alt="eldoria">
+                </div>
+                <h3>Eldoria</h3>
+                <p>Jogo 2D do gênero RPG de ação e combate, com sistema de geração dinâmica de missões utilizando um
+                    agente de IA.</p>
+            </div>
         </div>
     </section>
 
     <section class="geracaoProcedural" id="geracaoProcedural">
         <div class="container">
-            <p><strong>Pesquisa e implementação de técnicas de geração procedural para mapas de jogos 2D utilizando Unity e
-                C# </strong>.
+            <p><strong>Pesquisa e implementação de técnicas de geração procedural para mapas de jogos 2D utilizando
+                    Unity e
+                    C# </strong>.
             </p>
             <h2 class="geracaoProceduralTitulo">Autômato Celular</h2>
             <hr class="hrgeracao" />
@@ -170,7 +185,8 @@
                     </div>
                     <div class="imagemGeracaoProcedural">
                         <img src="./img/mapDiamoebaCaves.png" alt="diamoebaCaves">
-                        <p class="img-texto">Rule: Diamoeba | N: 5 | r: 1 | Steps: 3 |Rule: Caves | N: 13 | r: 2 | Steps: 1</p>
+                        <p class="img-texto">Rule: Diamoeba | N: 5 | r: 1 | Steps: 3 |Rule: Caves | N: 13 | r: 2 |
+                            Steps: 1</p>
                     </div>
                 </div>
 
@@ -310,18 +326,15 @@
     <section class="sobre" id="sobre">
         <div class="container">
             <div class="imagemSobre">
-                <img class=imagemSobree src="./img/hyandra2.png.jpeg" alt="hyandra">
+                <img class=imagemSobree src="./img/eu.png" alt="hyandra">
             </div>
             <div class="sobreCaixa">
                 <p>
-                    Sou estudante de Ciência da Computação no IFB, atualmente estou no oitavo semestre.
+                    E aí, pessoal! Durante minha jornada no curso de Ciência da Computação no IFB, desenvolvi alguns projetos e decidi compartilhá-los aqui para que outras pessoas possam conhecê-los.
 
-                    Durante a graduação, desenvolvi conhecimentos em lógica de programação e em linguagens como C, C#,
-                    Java, JavaScript e Python. Também tive meu primeiro contato com desenvolvimento de jogos na
-                    disciplina de Computação Gráfica, onde utilizei a Unity para criar um jogo 2D.
+                    Além disso, vejo esse portfólio como uma oportunidade para aprender mais sobre desenvolvimento web, utilizando tecnologias como JavaScript, HTML e CSS.
 
-                    Atualmente, estou explorando diferentes áreas da computação e buscando aprender novas tecnologias,
-                    com interesse especial em me aprofundar no desenvolvimento de jogos.
+                    Estou gostando muito dessa jornada de aprendizado e anseio por aprender cada vez mais!
                 </p>
             </div>
         </div>
